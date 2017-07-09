@@ -13,10 +13,13 @@ UI and Views:
 Technical Requirements:
 - News API (https://newsapi.org)
 - handlebars
+- Mongoose
+- Mongo DB
+- Express
 
 Features:
 - Search for headlines or news sources
-- 
-
+- Comment on news articles
+- Add news articles to the user's reading list
 
 
