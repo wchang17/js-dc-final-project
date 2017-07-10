@@ -1,4 +1,7 @@
-  let request = new XMLHttpRequest()
+  const templateSource = document.querySelector('#template-sources').innerText
+  let template = Handlebars.compile(templateSource)
+
+   let request = new XMLHttpRequest()
   request.onreadystatechange = handleRequest
 
  request.open('GET', 'https://newsapi.org/v1/sources?language=en')

@@ -1,0 +1,24 @@
+{
+  "name": "js-dc-final-project",
+  "version": "1.0.0",
+  "description": "Project Summary: Find trending articles from multiple news sources.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wchang17/js-dc-final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wchang17/js-dc-final-project/issues"
+  },
+  "homepage": "https://github.com/wchang17/js-dc-final-project#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0"
+  }
+}
