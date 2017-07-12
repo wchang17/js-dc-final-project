@@ -1,3 +1,4 @@
+  let app = document.querySelector('#app')
   const templateSource = document.querySelector('#template-sources').innerText
   let template = Handlebars.compile(templateSource)
 
