@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wchang17/js-dc-final-project#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "request": "^2.81.0"
   }
 }

@@ -1,19 +1,36 @@
-  let app = document.querySelector('#app')
-  const templateSource = document.querySelector('#template-sources').innerText
-  let template = Handlebars.compile(templateSource)
+ const express = require('express')
+const hbs  = require('express-handlebars')
+const request = require('request')
 
-   let request = new XMLHttpRequest()
-  request.onreadystatechange = handleRequest
+const app = express()
 
- request.open('GET', 'https://newsapi.org/v1/sources?language=en')
- request.send()
- 
-   function handleRequest() {
-    if ( request.readyState === 4 ) {
-      let response = JSON.parse( request.response )
+app.engine('handlebars', hbs({defaultLayout: 'main'}))
+app.set('view engine', 'handlebars')
 
-      console.log(response)
-    }
-  }
+app.get('/', function(req, res){
+  request.get('https://newsapi.org/v1/sources?language=en', ( error, response, body ) => {
+    let data = JSON.parse(body)
+    console.log(data)
+    res.render('index')
+  })
+})
 
-  // https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=2f94009c02d6422eae47c2195597f437
+// app.get('/latest', function(req, res){
+//   request.get(`https://newsapi.org/v1/articles?source=${source}&sortBy=latest&apiKey=2f94009c02d6422eae47c2195597f437`, ( error, response, body ) => {
+//     let data = JSON.parse(body)
+//     console.log(data)
+//     res.render('')
+//   })
+// })
+
+// app.get('/trending', function(req, res){
+//   request.get('https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=2f94009c02d6422eae47c2195597f437', ( error, response, body ) => {
+//     let data = JSON.parse(body)
+//     console.log(data)
+//     res.render('')
+//   })
+// })
+
+app.listen( 3000)
+
+
