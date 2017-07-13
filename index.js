@@ -15,21 +15,23 @@ app.get('/', function(req, res){
   })
 })
 
-// app.get('/latest', function(req, res){
+// app.get('/source/:id', function(req, res){
 //   request.get(`https://newsapi.org/v1/articles?source=${source}&sortBy=latest&apiKey=2f94009c02d6422eae47c2195597f437`, ( error, response, body ) => {
 //     let data = JSON.parse(body)
-//     console.log(data)
-//     res.render('')
+//     res.render('source')
 //   })
 // })
 
-// app.get('/trending', function(req, res){
-//   request.get('https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=2f94009c02d6422eae47c2195597f437', ( error, response, body ) => {
-//     let data = JSON.parse(body)
-//     console.log(data)
-//     res.render('')
-//   })
-// })
+app.get('/trending', function(req, res){
+  request.get('https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=2f94009c02d6422eae47c2195597f437', ( error, response, body ) => {
+    let data = JSON.parse(body)
+    res.render('trending')
+  })
+})
+
+app.get('/list', function(req, res) {
+	res.render('list')
+})
 
 app.listen( 3000)
 
