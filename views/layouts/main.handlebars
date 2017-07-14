@@ -11,12 +11,16 @@
     <div class="container">
       <a href ="/"><h1>News App</h1></a>
       <p class="stuff">A better way to view all news articles</p>
-      <form id="searchForm">
-        <input type="text" name="search" placeholder="search" value="search"/><input type="submit" value="Submit" />
-      </form>
     </div>
     <div><a href ="/trending">Trending</a></div>
     <div><a href ="/list">My List</a></div>
+    {{#if user}}
+    <div> Hello, {{user.username}} </div>
+    <div><a href="/logout">Log out</a></div>
+    {{else}}
+    <div><a href="/login">Log in</a></div>
+    <div><a href="/signup">Sign up</a></li>
+    {{/if}}
     </nav>
   </head>
   <body>

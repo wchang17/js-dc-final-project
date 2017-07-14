@@ -8,11 +8,11 @@ const User = require('../models/user')
 const router = express.Router()
 
 // Index route
-router.get("/", function( req, res ) {
+// router.get("/", function( req, res ) {
 
-  res.render('index', { user: req.user })
+//   res.render('index', { user: req.user })
 
-})
+// })
 
 // Signing up as a new user
 router.get('/signup', function( req, res ) {
