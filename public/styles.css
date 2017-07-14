@@ -1,0 +1,12 @@
+nav div {
+	display: inline-block;
+}
+
+p {
+color: red;
+font: "Georgia", serif;
+}
+
+h1 {
+	color: blue;
+}
