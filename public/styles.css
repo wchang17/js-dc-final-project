@@ -1,12 +1,18 @@
 nav div {
 	display: inline-block;
+	padding: 10px;
 }
 
 p {
-color: red;
 font: "Georgia", serif;
+font-size: 12px;
 }
 
 h1 {
 	color: blue;
+}
+
+img {
+	max-width: 50%;
+	padding: 10px;
 }

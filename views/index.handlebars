@@ -1,5 +1,8 @@
 <h2>Sources</h2>
 <p>Click on a source to see its trending articles</p>
 	{{#each data.sources}}
-	<div class="source"><a href="/source/{{id}}">{{name}}</a></div>
+	<div class="source">
+	<a href="/source/{{id}}"><h3>{{name}}</h3></a>
+	<p>{{description}}</p>
+	</div>
 	{{/each}}

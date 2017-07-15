@@ -25,7 +25,7 @@ router.get('/signup', function( req, res ) {
     username: req.body.username
   }), req.body.password, function( err, account ) {
     if ( err ) {
-      return res.render('register', { account: account })
+      return res.render('signup', { account: account })
     }
 
     passport.authenticate('local')(req, res, function() {
