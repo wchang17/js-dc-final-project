@@ -34,8 +34,6 @@ app.engine('handlebars', hbs({
 
 app.set('view engine', 'handlebars')
 
-//css file
-app.use( express.static('public') )
 
 //auth stuff
 app.use(bodyParser.json())
@@ -56,6 +54,9 @@ passport.deserializeUser(User.deserializeUser())
 
 app.use('/', routes) //this is for auth route views
 //end of auth stuff
+
+//css file
+app.use( express.static('public') )
 
 //homepage api request
 app.get('/', function(req, res){
@@ -86,6 +87,25 @@ app.get('/trending', function(req, res){
 app.get('/list', function(req, res) {
 	res.render('list')
 })
+
+//Posting articles from trending and sources to list
+// app.post('/source/:id', function(req, res) {
+//   let listItem = new listItem({
+//     article: req.body.article
+//   })
+//   listItem.save()
+//   res.redirect('/list')
+// })
+
+// app.post('/trending', function(req, res) {
+//   let listItem = new listItem({
+//     article: req.body.article
+//   })
+//   listItem.save()
+//   res.redirect('/list')
+// })
+
+
 
 app.listen( 3000)
 

@@ -12,9 +12,9 @@
       <a href ="/"><h1>News App</h1></a>
     </div>
     <div><a href ="/trending">Trending</a></div>
-    <div><a href ="/list">My List</a></div>
     {{#if user}}
     <div> Hello, {{user.username}} </div>
+    <div><a href ="/list">My List</a></div>
     <div><a href="/logout">Log out</a></div>
     {{else}}
     <div><a href="/login">Log in</a></div>
