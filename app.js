@@ -83,19 +83,28 @@ app.get('/trending', function(req, res){
   })
 })
 
+
+
+
 //reading list route
-// const Article = require('../models/article')
 app.get('/list', function(req, res) {
-  // Article.findOne({ '_id': req.params.id }, ( err, todo ) => {
-  //   article.remove()
-  //   res.redirect('/list')
-  // })
-	res.render('list', {user: req.user})
+ res.render('list', {user: req.user})
 })
 
-//Posting articles from trending and sources to list
+app.post('/list', function(req, res) {
+  req.user.favoriteArticles.push({
+    favoriteArticles: req.body  
+  })
+  req.user.save()
+  res.redirect('/list')
+})
+
+
+
+
+// //Posting articles from trending and sources to list
 // app.post('/source/:id', function(req, res) {
-//   let listItem = new listItem({
+//   let item = new currentItem({
 //     article: req.body.article
 //   })
 //   listItem.save()
