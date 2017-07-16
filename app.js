@@ -62,7 +62,7 @@ app.use( express.static('public') )
 app.get('/', function(req, res){
   request.get('https://newsapi.org/v1/sources?language=en', ( error, response, body ) => {
     let data = JSON.parse(body)
-    res.render('index', {data})
+    res.render('index', {data, user: req.user })
   })
 })
 
@@ -71,7 +71,7 @@ app.get('/source/:id', function(req, res){
   request.get(`https://newsapi.org/v1/articles?source=${req.params.id}&sortBy=top&apiKey=2f94009c02d6422eae47c2195597f437`, ( error, response, body ) => {
     let data = JSON.parse(body)
     // console.log(data)
-    res.render('source', {data})
+    res.render('source', {data, user: req.user})
   })
 })
 
@@ -79,13 +79,13 @@ app.get('/source/:id', function(req, res){
 app.get('/trending', function(req, res){
   request.get('https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=2f94009c02d6422eae47c2195597f437', ( error, response, body ) => {
     let data = JSON.parse(body)
-    res.render('trending', {data})
+    res.render('trending', {data, user: req.user})
   })
 })
 
 //user list
 app.get('/list', function(req, res) {
-	res.render('list')
+	res.render('list', {user: req.user})
 })
 
 //Posting articles from trending and sources to list

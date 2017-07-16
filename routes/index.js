@@ -7,12 +7,6 @@ const User = require('../models/user')
 // well as our sign-up flow
 const router = express.Router()
 
-// Index route
-// router.get("/", function( req, res ) {
-
-//   res.render('index', { user: req.user })
-
-// })
 
 // Signing up as a new user
 router.get('/signup', function( req, res ) {
@@ -25,6 +19,8 @@ router.get('/signup', function( req, res ) {
     username: req.body.username
   }), req.body.password, function( err, account ) {
     if ( err ) {
+      console.log( err )
+      // return res.render('signup', { err })
       return res.render('signup', { account: account })
     }
 
@@ -49,7 +45,7 @@ router.get('/login', function( req, res ) {
 )
 
 // Logging out
-router.get('logout', function ( req, res ) {
+router.get('/logout', function ( req, res ) {
   req.logout()
   res.redirect('/')
 })
