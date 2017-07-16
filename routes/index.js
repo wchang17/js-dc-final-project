@@ -3,8 +3,7 @@ const passport = require('passport')
 
 const User = require('../models/user')
 
-// Create a router for handling our application as
-// well as our sign-up flow
+// Create a router for handling our application and sign-up flow
 const router = express.Router()
 
 

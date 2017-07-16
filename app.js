@@ -83,8 +83,13 @@ app.get('/trending', function(req, res){
   })
 })
 
-//user list
+//reading list route
+// const Article = require('../models/article')
 app.get('/list', function(req, res) {
+  // Article.findOne({ '_id': req.params.id }, ( err, todo ) => {
+  //   article.remove()
+  //   res.redirect('/list')
+  // })
 	res.render('list', {user: req.user})
 })
 
