@@ -70,7 +70,6 @@ app.get('/', function(req, res){
 app.get('/source/:id', function(req, res){
   request.get(`https://newsapi.org/v1/articles?source=${req.params.id}&sortBy=top&apiKey=2f94009c02d6422eae47c2195597f437`, ( error, response, body ) => {
     let data = JSON.parse(body)
-    // console.log(data)
     res.render('source', {data, user: req.user})
   })
 })
@@ -97,7 +96,6 @@ app.post('/list', function(req, res) {
     description: req.body.description  
   })
   req.user.save()
-  console.log(req.user)
   res.redirect('/list')
 })
 

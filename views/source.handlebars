@@ -3,13 +3,12 @@
 
 {{#each data.articles}}
 
-<div>
-	<h3><strong><a href = "{{url}}">{{title}}</a></strong></h3> 
-
-</div>
+<div class ="sourcediv">
+<h3><strong><a href = "{{url}}">{{title}}</a></strong></h3> 
 <p>{{publishedAt}}</p>
 <img src = "{{urlToImage}}" />
 <p>{{description}}</p>
+</div>
 
 {{#if ../user}}
 <form action="/list" method="post">	

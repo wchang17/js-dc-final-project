@@ -1,7 +1,21 @@
 nav{
+	color: white;
 	background-color: gray;
+	top: 0;
 }
 nav div {
+	display: inline-block;
+	padding: 10px;
+}
+
+footer {
+	color: white;
+	background-color: gray;
+	margin-top: 20px;
+	bottom: 0;
+}
+
+footer div {
 	display: inline-block;
 	padding: 10px;
 }
@@ -12,11 +26,16 @@ font-size: 16px;
 }
 
 h1 {
-	color: blue;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 35px;
+	color: #3fa7ce;
 }
 
 h2 {
-	font: "Arial", Helvetica, sans-serif;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	color: #3fa7ce;
 }
 
 h3 {
@@ -33,15 +52,36 @@ a {
 	color: inherit;
 }
 
-.other {
-	float: right;
+a:hover {
+	color: #3fa7ce;;
 }
 
+
 .listimage {
-	max-width: 20%;
+	max-width: 35%;
+	margin-right: 15px;
+	padding: 10px;
 	float: left;
+}
+
+.listview {
+	max-width: 50%;
+	overflow: hidden;
+	padding: 20px;
 }
 
 .source {
 	max-width: 70%;
+}
+
+.sourcediv {
+	max-width: 70%;
+}
+
+.trenddiv {
+	max-width: 70%;
+}
+
+.other {
+	float: right;
 }

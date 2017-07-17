@@ -4,12 +4,11 @@ Project Summary:
 Find trending articles from multiple news sources.
 
 UI and Views:
-- homepage that lists all news sources, 
-- a single article page that displays the article url, summary, and comments(bonus)
-- latest articles page that display the newest and most popular articles
+- homepage that lists all news sources 
+- a single news source page that displays the article url, summary, and comments(bonus)
 - trending articles page that display the newest and most popular articles
 - a reading list that users can add articles to
-- search results page for when the user searches for a news source or headline
+- a signup and login page
 
 Technical Requirements:
 - News API (https://newsapi.org)
@@ -17,10 +16,13 @@ Technical Requirements:
 - Mongoose
 - Mongo DB
 - Express
+- Passport
+- Request
+- Body Parser
 
 Features:
-- Search for headlines or news sources
-- Comment on news articles
+- Create an account
+- View trending articles for each news source
 - Add news articles to the user's reading list
 
 

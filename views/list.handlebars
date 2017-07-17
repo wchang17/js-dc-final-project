@@ -1,9 +1,9 @@
 <h2>Articles to Read</h2>
-<p>Add more articles or remove ones you've already read</p>
+<p>Here are the articles you have added to your list:</p>
 {{#each user.favoriteArticles}}
-	<div>
-	<h3><strong><a href = "{{url}}">{{title}}</a></strong></h3> 
-</div>
+<div class ="listview">
+<h3><strong><a href = "{{url}}">{{title}}</a></strong></h3>
+<p>{{description}}</p> 
 <img class="listimage" src = "{{urlToImage}}" />
-<p>{{description}}</p>
+</div>
 {{/ each}}
