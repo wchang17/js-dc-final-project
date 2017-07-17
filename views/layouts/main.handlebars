@@ -11,15 +11,17 @@
     <div class="container">
       <a href ="/"><h1>News App</h1></a>
     </div>
-    {{#if user}}
-    <div> Hello, {{user.username}} </div>
-    <div><a href ="/trending">Trending</a></div>
-    <div><a href ="/list">My List</a></div>
-    <div><a href="/logout">Log out</a></div>
-    {{else}}
-    <div><a href="/login">Log in</a></div>
-    <div><a href="/signup">Sign up</a></li>
-    {{/if}}
+    <div class="other">
+        {{#if user}}
+            <div> Hello, {{user.username}} </div>
+            <div><a href ="/trending">Trending</a></div>
+            <div><a href ="/list">My List</a></div>
+            <div><a href="/logout">Log out</a></div>
+            {{else}}
+            <div><a href="/login">Log in</a></div>
+            <div><a href="/signup">Sign up</a></li>
+        {{/if}}
+    </div>
     </nav>
     <p class="stuff">A better way to view all news articles</p>
   </head>

@@ -1,16 +1,20 @@
 <h2>Trending Articles</h2>
 
 {{#each data.articles}}
-<div>
 	<div>
 	<h3><strong><a href = "{{url}}">{{title}}</a></strong></h3> 
-	{{#if user}}
-	<button class="add" type="button">+</button>
-	{{/if}}
 	</div>
 	<p>{{author}} - {{publishedAt}}</p>
 	<img src = "{{urlToImage}}" />
 	<p>{{description}}</p>
-</div>
+{{#if ../user}}
+<form action="/list" method="post">	
+	<input type="hidden" name="title" value="{{title}}">
+	<input type="hidden" name="url" value="{{url}}">
+	<input type="hidden" name="urlToImage" value="{{urlToImage}}">
+	<input type="hidden" name="description" value="{{description}}">	
+	<button class="add" type="submit">+</button>
+</form>
+{{/if}}
 <br />
 {{/each}}

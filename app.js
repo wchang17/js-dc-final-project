@@ -84,8 +84,6 @@ app.get('/trending', function(req, res){
 })
 
 
-
-
 //reading list route
 app.get('/list', function(req, res) {
  res.render('list', {user: req.user})
@@ -93,31 +91,16 @@ app.get('/list', function(req, res) {
 
 app.post('/list', function(req, res) {
   req.user.favoriteArticles.push({
-    favoriteArticles: req.body  
+    title: req.body.title,
+    url: req.body.url,
+    urlToImage: req.body.urlToImage,
+    description: req.body.description  
   })
   req.user.save()
+  console.log(req.user)
   res.redirect('/list')
 })
 
-
-
-
-// //Posting articles from trending and sources to list
-// app.post('/source/:id', function(req, res) {
-//   let item = new currentItem({
-//     article: req.body.article
-//   })
-//   listItem.save()
-//   res.redirect('/list')
-// })
-
-// app.post('/trending', function(req, res) {
-//   let listItem = new listItem({
-//     article: req.body.article
-//   })
-//   listItem.save()
-//   res.redirect('/list')
-// })
 
 
 

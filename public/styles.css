@@ -1,3 +1,6 @@
+nav{
+	background-color: gray;
+}
 nav div {
 	display: inline-block;
 	padding: 10px;
@@ -12,11 +15,34 @@ h1 {
 	color: blue;
 }
 
+h2 {
+	font: "Arial", Helvetica, sans-serif;
+}
+
+h3 {
+	color: gray;
+}
+
 img {
 	max-width: 50%;
 	padding: 10px;
 }
 
-/*input[type="text"] {
-  border-style: none;
-}*/
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.other {
+	float: right;
+}
+
+.listimage {
+	max-width: 20%;
+	float: left;
+}
+
+.listcontent {
+	width: 400px;
+	padding: 10px;
+}
