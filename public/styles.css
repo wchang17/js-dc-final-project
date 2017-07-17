@@ -8,7 +8,7 @@ nav div {
 
 p {
 font: "Georgia", serif;
-font-size: 12px;
+font-size: 16px;
 }
 
 h1 {
@@ -42,7 +42,6 @@ a {
 	float: left;
 }
 
-.listcontent {
-	width: 400px;
-	padding: 10px;
+.source {
+	max-width: 70%;
 }
