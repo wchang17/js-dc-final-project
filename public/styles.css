@@ -85,3 +85,11 @@ a:hover {
 .other {
 	float: right;
 }
+
+.signup {
+	height: 350px;
+}
+
+.login {
+	height: 350px;
+}
